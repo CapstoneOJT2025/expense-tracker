@@ -7,6 +7,17 @@ form.addEventListener("submit", function(event) {
 
     event.preventDefault();
 
-    console.log("Form Submitted");
+    const text = description.value;
+    const money = amount.value;
+
+    const newTransaction = document.createElement("li");
+
+    newTransaction.textContent =
+        `${text} : $${money}`;
+
+    transactionList.appendChild(newTransaction);
+
+    description.value = "";
+    amount.value = "";
 
 });
