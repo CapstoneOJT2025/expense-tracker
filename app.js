@@ -10,6 +10,10 @@ form.addEventListener("submit", function(event) {
     const text = description.value;
     const money = amount.value;
 
+    if(transactionList.innerHTML.includes("No transactions yet")){
+    transactionList.innerHTML = "";
+    }
+
     const newTransaction = document.createElement("li");
 
     newTransaction.textContent =
